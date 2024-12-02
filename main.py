@@ -97,8 +97,9 @@ def goals_form():
 def macros():
     profile = st.session_state.profile
     nutrition = st.container(border=True)
-    nutrition.header("Macros")
-    if nutrition.button("Generate with AI"):
+    nutrition.header(" Daily Macros")
+    nutrition.subheader("Set your daily macros or generate with AI")
+    if nutrition.button("Get recommendation from AI"):
         result = get_macros(profile.get("general"), profile.get("goals"))
         profile["nutrition"] = result
         nutrition.success("AI has generated the results.")
