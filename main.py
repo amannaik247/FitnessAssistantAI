@@ -98,7 +98,7 @@ def macros():
     profile = st.session_state.profile
     nutrition = st.container(border=True)
     nutrition.header(" Daily Macros")
-    nutrition.subheader("Set your daily macros or generate with AI")
+    nutrition.text("Set your own daily macros or generate with AI")
     if nutrition.button("Get recommendation from AI"):
         result = get_macros(profile.get("general"), profile.get("goals"))
         profile["nutrition"] = result
