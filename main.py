@@ -22,14 +22,14 @@ def personal_data_form():
             "Weight (kg)",
             min_value=0.0,
             max_value=300.0,
-            step=0.1,
+            step=1.0,
             value=float(profile["general"]["weight"]),
         )
         height = st.number_input(
             "Height (cm)",
             min_value=0.0,
             max_value=250.0,
-            step=0.1,
+            step=1.0,
             value=float(profile["general"]["height"]),
         )
         genders = ["Male", "Female", "Other"]
