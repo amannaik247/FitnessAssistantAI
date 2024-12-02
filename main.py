@@ -16,7 +16,12 @@ def personal_data_form():
 
         name = st.text_input("Name", value=profile["general"]["name"])
         age = st.number_input(
-            "Age", min_value=1, max_value=120, step=1, value=profile["general"]["age"]
+            "Age",
+            min_value=1,
+            max_value=120,
+            step=1,
+            value=profile["general"]["age"],
+            placeholder="Your age",
         )
         weight = st.number_input(
             "Weight (kg)",
@@ -24,6 +29,7 @@ def personal_data_form():
             max_value=300.0,
             step=1.0,
             value=float(profile["general"]["weight"]),
+            placeholder="Your weight",
         )
         height = st.number_input(
             "Height (cm)",
@@ -31,6 +37,7 @@ def personal_data_form():
             max_value=250.0,
             step=1.0,
             value=float(profile["general"]["height"]),
+            placeholder="Your weight",
         )
         genders = ["Male", "Female", "Other"]
         gender = st.radio(

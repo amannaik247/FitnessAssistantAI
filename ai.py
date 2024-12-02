@@ -73,9 +73,7 @@ def run_flow_askai(
         }
 
     response = requests.post(api_url, json=payload, headers=headers)
-    return response.json()["outputs"][0]["outputs"][0]["results"]["message"]["data"][
-        "text"
-    ]
+    return response.json()["outputs"][0]["outputs"][0]["results"]["message"]["text"]
 
 
 # MACROS API CALL
@@ -117,5 +115,7 @@ def run_flow_macros(
     )
 
 
-# result = get_macros("name: Aman, age:21, weight: 100kg, height: 180cm", "muscle gain")
+# result = ask_ai(
+#     "name: Aman, age:21, weight: 100kg, height: 180cm", "create a diet for me"
+# )
 # print(result)
